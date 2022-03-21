@@ -1,0 +1,30 @@
+<div class="results">
+
+    <!-- <h1 class="font-bold text-center text-4xl py-5">Find our latest books here!..</h1> -->
+    <!-- <p>{{bookresults?.length}} results</p> -->
+    <div class="grid grid-cols-1 gap-10 px-5" *ngFor="let res of bookresults">
+        <img class="block mx-auto w-1/2" [src]="res?.book_image" alt="res?.title">
+    
+    <h3 class="font-bold my-2 text-2xl"> {{res?.title}}</h3>
+    <a [href]="res?.web_url" class="url" target="_blank" color="#f1f1f1">{{res?.web_url}} </a>
+    <p class="mb-4">{{res?.description}}</p>
+    <p >
+        <b class="author">
+        Author : {{res?.author}}
+        </b>
+    </p>
+   <ul>
+       <li><b>Publisher :</b> {{res?.publisher}}</li>
+       <li><b>IsBn :</b> {{res?.primary_isbn10}}</li>
+       <li><b>$</b>{{res?.price}}</li>
+
+   </ul>
+    <ul  >
+        <div class="buy" *ngFor="">
+            <!-- <li>{{buylink?.buy_liks}}</li> -->
+        </div>
+
+    </ul>
+        
+ </div>
+</div>
